@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аудитория сайта zr.ru</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="functions.js"></script>
+</head>
+<body>
+  <nav class="dropdown-menu">
+    <a href="https://www.zr.ru" class="navigation-menu__item" target="_blank">Открыть сайт</a>
+    <div>Мы в социальных сетях</div>
+    <a href="https://vk.com/zronline" target="_blank"><img src="images/sm/vk.svg" class="sm-icon" alt="VK-logo"></a>
+    <a href="https://dzen.ru/zr.ru" target="_blank"><img src="images/sm/dzen.svg" class="sm-icon" alt="Dzen-logo"></a>
+    <a href="https://youtube.com/user/tvzrru" target="_blank"><img src="images/sm/youtube.svg" class="sm-icon" alt="YT-logo"></a>
+    <a href="https://t.me/zr_ru" target="_blank"><img src="images/sm/telegram.svg" class="sm-icon" alt="Telegram-logo"></a>
+    <a href="https://vb.me/zronline" target="_blank"><img src="images/sm/viber.svg" class="sm-icon" alt="Viber-logo"></a>
+  </nav>
+  <nav class="navigation-menu">
+    <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+    <!-- <a href="" class="navigation-menu__item">ФАКТЫ</a> -->
+    <a href="audience.html" class="navigation-menu__item">АУДИТОРИЯ</a>
+    <a href="events.html" class="navigation-menu__item">СОБЫТИЯ</a>
+    <a href="adv.html" class="navigation-menu__item">РЕКЛАМА</a>
+    <img src="images/hamburger.svg" class="dropdown-button" alt="Dropdown_button">
+  </nav>
+  <script src="menu.js"></script>
+  <div class="wrapper">
+    <section class="figures__visual">
+      <div class="figures__diag">
+        <h1 class="diag__header">Динамика аудитории сайта, тысяч пользователей ежемесячно.</h1>
+        <div class="diag__container"></div>
+      </div>
+      <div class="figures__cards">
+        <div class="figures__cards__card">
+          <img src="images/launch.svg" class="figures__cards__card__icon" alt="Год запуска">
+          <h2 class="figures__cards__card__data year__animate">1998</h2>
+          <p class="figures__cards__card__text">Год основания</p>
+        </div>
+        <div class="figures__cards__card">
+          <img src="images/visit.svg" class="figures__cards__card__icon" alt="Визит">
+          <h2 class="figures__cards__card__data visits__animate">12 600</h2>
+          <p class="figures__cards__card__text">Тысяч визитов ежемесячно</p>
+        </div>
+        <div class="figures__cards__card">
+          <img src="images/view.svg" class="figures__cards__card__icon" alt="Просмотр">
+          <h2 class="figures__cards__card__data views__animate">31 200</h2>
+          <p class="figures__cards__card__text">Тысяч просмотров страниц ежемесячно</p>
+        </div>
+        <div class="figures__cards__card">
+          <img src="images/time.svg" class="figures__cards__card__icon" alt="Длительность визита">
+          <h2 class="figures__cards__card__data duration__animate">2:02</h2>
+          <p class="figures__cards__card__text">Длительность визита, минут.</p>
+        </div>
+      </div>
+    </section>
+    <h1 class="facts__resume"><b class="share__number">80</b>% трафика сайта - мобильные устройства,<br/> доля мужской аудитории - 85% </h1>
+  </div>
+  <script src="audience.js"></script>
+  <script>
+    const DIAGRAM_DATA = {
+      2016: 2498,
+      2017: 2903,
+      2018: 3967,
+      2019: 6750,
+      2020: 7970,
+    };
+    const diagContainer = document.querySelector('.diag__container')
+    createBarDiagram(diagContainer, DIAGRAM_DATA, 25, 3600)
+
+    const yearAnim = document.querySelector('.year__animate')
+    animateNumber(yearAnim, 1998, '', 10, 3600)
+
+    const visitsAnim = document.querySelector('.visits__animate')
+    animateNumber(visitsAnim, 11900, ' ', 10, 3600)
+
+    const viewsAnim = document.querySelector('.views__animate')
+    animateNumber(viewsAnim, 22800, ' ', 10, 3600)
+
+    animateNumber(document.querySelector('.share__number'), 80, '', 10, 3600)
+  </script>
+  <footer>
+  </footer>
+</body>
+</html>

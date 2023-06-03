@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>События "За рулем"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="dropdown-menu">
+    <a href="https://www.zr.ru" class="navigation-menu__item" target="_blank">Открыть сайт</a>
+    <div>Мы в социальных сетях</div>
+    <a href="https://vk.com/zronline" target="_blank"><img src="images/sm/vk.svg" class="sm-icon" alt="VK-logo"></a>
+    <a href="https://dzen.ru/zr.ru" target="_blank"><img src="images/sm/dzen.svg" class="sm-icon" alt="Dzen-logo"></a>
+    <a href="https://youtube.com/user/tvzrru" target="_blank"><img src="images/sm/youtube.svg" class="sm-icon" alt="YT-logo"></a>
+    <a href="https://t.me/zr_ru" target="_blank"><img src="images/sm/telegram.svg" class="sm-icon" alt="Telegram-logo"></a>
+    <a href="https://vb.me/zronline" target="_blank"><img src="images/sm/viber.svg" class="sm-icon" alt="Viber-logo"></a>
+  </nav>
+  <nav class="navigation-menu">
+    <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+    <!-- <a href="" class="navigation-menu__item">ФАКТЫ</a> -->
+    <a href="audience.html" class="navigation-menu__item">АУДИТОРИЯ</a>
+    <a href="events.html" class="navigation-menu__item">СОБЫТИЯ</a>
+    <a href="adv.html" class="navigation-menu__item">РЕКЛАМА</a>
+    <img src="images/hamburger.svg" class="dropdown-button" alt="Dropdown_button">
+  </nav>
+  <script src="menu.js"></script>
+
+  <div class="wrapper event">
+    <div class="event__description"></div>
+    <section class="event__photos">
+      <form action="" class="event__form">
+        <label class="event__form__label">Выберите мероприятие</label>
+        <select name="event_zr" class="event__name">
+          <option value="grandprix">Гран-при "За рулем"</option>
+          <option value="starrace">Гонка Звезд</option>
+          <option value="race60">60-часов</option>
+        </select>
+        <label class="event__form__label elem_hidden">Выберите год</label>
+        <select name="event__year" class="event__year elem_hidden">
+          <option value="0">Выберите событие</option>
+        </select>
+      </form>
+      <div class="event__gallery"></div>
+    </section>
+    <script src="content/data_events.js"></script>
+    <script src="events.js"></script>
+  </div>
+  <footer></footer>
+</body>
+</html>
