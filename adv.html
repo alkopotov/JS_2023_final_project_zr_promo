@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Издательство "За рулем"</title>
+  <title>Рекламные возможности "За рулем"</title>
   <link rel="stylesheet" href="style.css">
   <script src="functions.js"></script>
 </head>
@@ -123,20 +123,20 @@
     </section>
     <h2>Рассчитайте медиа-план</h2>
 
- <form action="" class="event__form">
-        <label class="event__form__label">Версия сайта</label>
-        <select name="event_zr" class="event__year">
+ <form action="" class="mediaplan__form">
+        <label class="mediaplan__form__label">Версия сайта</label>
+        <select name="type__site" class="mediaplan__form__site">
           <option value="mobile">mobile</option>
           <option value="desktop">desktop</option>
         </select>
-        <label class="event__form__label">Формат</label>
-        <select name="event__year" class="event__year">
+        <label class="mediaplan__form__label">Формат</label>
+        <select name="format" class="mediaplan__form__format">
           <option value="1">300x300</option>
           <option value="2">FullScreen</option>
           <option value="3">Content-roll</option>
         </select>
-        <label class="event__form__label">Месяц размещения</label>
-        <select name="event__year" class="event__year">
+        <label class="mediaplan__form__label">Месяц размещения</label>
+        <select name="month" class="mediaplan__form__month">
           <option value="01">01-янв</option>
           <option value="02">02-фев</option>
           <option value="03">03-мар</option>
@@ -150,13 +150,15 @@
           <option value="11">11-ноя</option>
           <option value="12">12-дек</option>
         </select>
-        <label class="event__form__label">Тысяч показов</label>
-        <input class="event__year" name="views" type="number" min="100" max="3000" value="100">
+        <label class="mediaplan__form__label">Тысяч показов</label>
+        <input class="mediaplan__form__views" name="views" type="number" min="100" max="3000" value="100">
         <button type="submit">Добавить</button>
       </form>
   </div>
   <footer>
-
+    <h3 class="footer__text">+7 495 363 4707</h3>
+    <h3 class="footer__text">107045 Москва, Селиверстов переулок, д. 10 стр. 1</h3>
+    <h3 class="footer__text">sales@zr.ru</h3>
   </footer>
   <script src="mediaplan.js"></script>
 </body>

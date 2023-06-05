@@ -136,7 +136,6 @@ function updateMediaPlanDiscount(arrayMediaplanRow) {
   result.push(totalDiscountPrice);
   result.push(totalViews);
   result.push(totalClicks);
-  console.log(result)
   return result;
 }
 
@@ -204,7 +203,6 @@ function createMediaPlan(arrayMediaplanRow) {
     `;
     mediaPlanTable.rows[mediaPlanTable.rows.length - 1].className = 'table__finals';
     for (let i = 1; i < mediaPlanTable.rows.length; i++) {
-    console.log(mediaPlanTable.rows[i].cells.length)
     mediaPlanTable.rows[i].cells[mediaPlanTable.rows[i].cells.length - 1].addEventListener('click', e =>{
       let deleteIndex = e.target.parentElement.parentElement.rowIndex - 1;
       if (deleteIndex >= mediaPlan.length) {
