@@ -248,3 +248,16 @@ td, th{
   background-color: bisque;
   font-weight: 500;
 }
+.price-list__prices {
+  min-height: 550px;
+}
+.price-list__specimen {
+  padding-left: 15px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price-list__specimen_screen {
+  max-height: 550px;
+  max-width: 95%;
+}

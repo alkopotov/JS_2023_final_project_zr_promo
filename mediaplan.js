@@ -55,7 +55,32 @@ const MONTHS  = {
   '12': 'дек'
 }
 
-
+const priceTable = document.querySelector('.price-list__prices__banners');
+const formatScreen = document.querySelector('.price-list__specimen_screen')
+priceTable.rows[2].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/01scr.webp"
+})
+priceTable.rows[3].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/02scr.webp"
+})
+priceTable.rows[4].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/03scr.webp"
+})
+priceTable.rows[6].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/04scr.webp"
+})
+priceTable.rows[7].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/05scr.webp"
+})
+priceTable.rows[8].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/06scr.webp"
+})
+priceTable.rows[9].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/07scr.webp"
+})
+priceTable.rows[10].addEventListener('mouseover', e => {
+  formatScreen.src = "images/screens/08scr.webp"
+})
 
 function getDiscount(orderBaseRate) {
   return orderBaseRate > 0 && orderBaseRate <= 100000 ? 0.1 :
@@ -92,9 +117,6 @@ class MediaplanRow {
   }
 }
 
-// console.log(PRICELIST.find(el => el.id = 2).cpm)
-
-
 function updateMediaPlanDiscount(arrayMediaplanRow) {
   result = []
   let totalBaseRate = 0;
@@ -119,9 +141,6 @@ function updateMediaPlanDiscount(arrayMediaplanRow) {
 }
 
 let mediaPlan = [];
-mediaPlan.push(new MediaplanRow('desktop', 4, '09', 350))
-mediaPlan.push(new MediaplanRow('mobile', 1, '08', 200))
-
 
 const mediaPlanTable = document.createElement('table');
 
@@ -135,11 +154,11 @@ function createMediaPlan(arrayMediaplanRow) {
     `<tr>
       <th>№ пп</th>
       <th>Тип</th>
-      <th>Формат</th>
-      <th>Месяц размещения</th>
+      <th style="min-width: 90px;">Формат</th>
+      <th style="width: 105px;">Месяц размещения</th>
       <th>Кол-во единиц</th>
-      <th>CPM</th>
-      <th>Сезонный коэф-т</th>
+      <th style="min-width: 60px">CPM</th>
+      <th style="width: 60px;">Сезонный коэф-т</th>
       <th>Стоимость по тарифу</th>
       <th>Скидка</th>
       <th>Стоимость со скидкой</th>
@@ -154,7 +173,7 @@ function createMediaPlan(arrayMediaplanRow) {
       <tr>
         <td ${numStyle}>${arrayMediaplanRow.indexOf(elem)+1}.</td>
         <td>${elem.typeSite}</td>
-        <td>${elem.nameBanner}</td>
+        <td style="text-align: center;">${elem.nameBanner}</td>
         <td style="text-align: center;">${elem.periodMonth}</td>
         <td ${numStyle}>${formatNumber(elem.unitsNumber, ' ', 0)}</td>
         <td ${numStyle}>${formatNumber(elem.cpm, ' ', 0)}</td>
@@ -199,7 +218,6 @@ function createMediaPlan(arrayMediaplanRow) {
   }
   document.querySelector('.wrapper').append(mediaPlanTable);
 }
-createMediaPlan(mediaPlan)
 
 document.forms[0][0].addEventListener('change', e => {
   document.forms[0][1].innerHTML = e.target.value == 'mobile' ?
@@ -211,7 +229,6 @@ document.forms[0][0].addEventListener('change', e => {
     <option value="6">Брендирование</option>
     <option value="7">FullScreen</option>
     <option value="8">Content-roll</option>`;
-  console.log(e.target.value)
 })
 
 document.forms[0].addEventListener('submit', function(e) {
@@ -220,7 +237,6 @@ document.forms[0].addEventListener('submit', function(e) {
   for (let j = 0; j < this.elements.length - 1; j++) {
     resVal.push(this.elements[j].value)
   }
-  console.log(resVal)
+  mediaPlan.push(new MediaplanRow(resVal[0], +resVal[1], resVal[2], +resVal[3]))
+  createMediaPlan(mediaPlan)
 })
-
-// e.target.parentElement.rowIndex
