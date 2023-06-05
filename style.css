@@ -298,3 +298,11 @@ td, th{
 .mediaplan__form__month, .mediaplan__form__views {
   width: 80px;
 }
+.mediaplan__form__button {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
